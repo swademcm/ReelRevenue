@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us - Reel Revenue{% endblock %}
+
+{% block content %}
+<section class="legal-page">
+    <div class="container">
+        <h1>Contact <span class="underline">Us</span></h1>
+        <p class="section-subtitle">Get in touch with our team</p>
+        
+        <div class="legal-content">
+            <div class="contact-info">
+                <h2>Get In Touch</h2>
+                <p>We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+                
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <h3><i class="fas fa-envelope"></i> Email Support</h3>
+                        <p>General inquiries: info@reelrevenue.com</p>
+                        <p>Technical support: support@reelrevenue.com</p>
+                        <p>Business partnerships: partnerships@reelrevenue.com</p>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <h3><i class="fas fa-map-marker-alt"></i> Office Address</h3>
+                        <p>Reel Revenue, Inc.<br>
+                        123 Business Street<br>
+                        Suite 100<br>
+                        Business City, BC 12345<br>
+                        United States</p>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <h3><i class="fas fa-clock"></i> Response Times</h3>
+                        <p>General inquiries: 24-48 hours</p>
+                        <p>Technical support: 12-24 hours</p>
+                        <p>Urgent issues: Within 4 hours</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form-section">
+                <h2>Send Us A Message</h2>
+                <form class="contact-form" action="/contact" method="POST">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a topic</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="technical">Technical Support</option>
+                            <option value="billing">Billing Question</option>
+                            <option value="partnership">Partnership Opportunity</option>
+                            <option value="feedback">Feedback</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required placeholder="Tell us how we can help you..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+            
+            <div class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <h3>How quickly can I expect a response?</h3>
+                    <p>We typically respond to all inquiries within 24-48 hours. Technical support requests are prioritized and usually receive a response within 12-24 hours.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>What information should I include in my support request?</h3>
+                    <p>Please include your account email, a detailed description of the issue, and any relevant screenshots or error messages. This helps us resolve your issue more quickly.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Do you offer phone support?</h3>
+                    <p>Currently, we provide support primarily through email and our community forum. This allows us to provide detailed responses and maintain a record of our assistance.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
